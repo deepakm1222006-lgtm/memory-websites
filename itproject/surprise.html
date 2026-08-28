@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Surprise | Small Gift</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="journey.css">
+
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- 🌙 MUST BE LAST -->
+    <link rel="stylesheet" href="darkmode.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+    <div class="logo">
+        ✦ Small Gift
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="memories.html">Memories</a>
+
+        <a href="journey.html">Journey</a>
+
+        <a href="timeline.html">Timeline</a>
+
+        <a href="games.html">Games</a>
+
+        <a href="plant.html">Plant</a>
+
+        <a href="reasons.html">Reasons</a>
+
+        <a href="surprise.html">Surprise</a>
+
+    </nav>
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle dark mode"
+    >
+        🌙
+    </button>
+
+</header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="surprise-hero">
+
+
+            <div class="surprise-box-icon">
+
+                🎁
+
+            </div>
+
+
+            <span class="small-label">
+                🔐 FINAL PAGE
+            </span>
+
+
+            <h1>
+
+                There's something
+                <span>inside.</span>
+
+            </h1>
+
+
+            <p>
+
+                You've reached the last room
+                of this little website.
+
+                But the final part is locked.
+
+            </p>
+
+
+            <button
+                class="primary-btn surprise-open-btn"
+                id="openSurprise"
+            >
+                🔓 Open the Surprise
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ================= SURPRISE CONTENT ================= -->
+
+        <section
+            class="surprise-content"
+            id="surpriseContent"
+        >
+
+
+            <!-- MAIN MESSAGE -->
+
+            <div class="surprise-message-card">
+
+
+                <div class="message-decoration">
+                    ✨
+                </div>
+
+
+                <span>
+                    FOR ILAKIYAA
+                </span>
+
+
+                <h2>
+                    A new chapter is waiting.
+                </h2>
+
+
+                <p>
+
+                    September 1 is not just another date.
+
+                    It's the beginning of a different
+                    routine, new experiences, new people
+                    and plenty of stories to collect.
+
+                </p>
+
+
+                <p>
+
+                    So go explore.
+                    Learn new things.
+                    Make mistakes.
+                    Laugh a lot.
+                    Take pictures.
+
+                    And most importantly —
+                    enjoy your own journey.
+
+                </p>
+
+
+                <div class="message-sign">
+
+                    🌱 Keep Growing
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= SURPRISE CARDS ================= -->
+
+            <div class="surprise-cards">
+
+
+                <div class="surprise-mini-card">
+
+                    <div>
+                        🚀
+                    </div>
+
+                    <h3>
+                        Explore
+                    </h3>
+
+                    <p>
+                        Find something new
+                        in your new city.
+                    </p>
+
+                </div>
+
+
+                <div class="surprise-mini-card">
+
+                    <div>
+                        📚
+                    </div>
+
+                    <h3>
+                        Learn
+                    </h3>
+
+                    <p>
+                        Collect knowledge
+                        beyond the classroom.
+                    </p>
+
+                </div>
+
+
+                <div class="surprise-mini-card">
+
+                    <div>
+                        📸
+                    </div>
+
+                    <h3>
+                        Remember
+                    </h3>
+
+                    <p>
+                        Save the little moments
+                        along the way.
+                    </p>
+
+                </div>
+
+
+                <div class="surprise-mini-card">
+
+                    <div>
+                        🌱
+                    </div>
+
+                    <h3>
+                        Grow
+                    </h3>
+
+                    <p>
+                        Become a little better
+                        every day.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= FINAL BUTTON ================= -->
+
+            <div class="final-surprise">
+
+                <span>
+                    ONE LAST CLICK
+                </span>
+
+
+                <h2>
+                    Ready for the next chapter?
+                </h2>
+
+
+                <button
+                    class="primary-btn"
+                    id="finalButton"
+                >
+                    🚀 Let's Go
+                </button>
+
+
+                <p
+                    id="finalMessage"
+                    class="final-message"
+                ></p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <div class="footer-logo">
+                🌱 Ilakiyaa's World
+            </div>
+
+            <p>
+                New place. New experiences. Keep growing.
+            </p>
+
+            <small>
+                © 2026 • Little World Project
+            </small>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="main.js"></script>
+
+
+    <script>
+
+
+        // ===============================================
+        // OPEN SURPRISE
+        // ===============================================
+
+
+        const openButton =
+            document.getElementById(
+                "openSurprise"
+            );
+
+
+        const surpriseContent =
+            document.getElementById(
+                "surpriseContent"
+            );
+
+
+        openButton.addEventListener(
+            "click",
+            function() {
+
+
+                surpriseContent.classList.add(
+                    "show-surprise"
+                );
+
+
+                openButton.textContent =
+                    "🎉 Surprise Opened!";
+
+
+                openButton.disabled =
+                    true;
+
+
+                setTimeout(
+                    function() {
+
+                        surpriseContent.scrollIntoView({
+                            behavior: "smooth"
+                        });
+
+                    },
+                    200
+                );
+
+            }
+        );
+
+
+
+        // ===============================================
+        // FINAL BUTTON
+        // ===============================================
+
+
+        const finalButton =
+            document.getElementById(
+                "finalButton"
+            );
+
+
+        const finalMessage =
+            document.getElementById(
+                "finalMessage"
+            );
+
+
+        finalButton.addEventListener(
+            "click",
+            function() {
+
+
+                finalMessage.textContent =
+                    "🚀 Chapter unlocked. Go make some amazing memories!";
+
+
+                finalButton.textContent =
+                    "✨ Chapter Unlocked";
+
+
+                finalButton.disabled =
+                    true;
+
+            }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>

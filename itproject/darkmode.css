@@ -1,0 +1,1098 @@
+/* =========================================================
+   🌙 ILAAKIYAA'S WORLD — GLOBAL DARK MODE
+   Put this CSS file LAST in every HTML page
+========================================================= */
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+body.dark-mode,
+body.dark,
+[data-theme="dark"] {
+
+    background: #0b1018 !important;
+    color: #f5f7fb !important;
+
+}
+
+
+/* =========================================================
+   EVERYTHING INSIDE BODY
+========================================================= */
+
+body.dark-mode main,
+body.dark main,
+body.dark-mode section,
+body.dark section {
+
+    background-color: #0f151e !important;
+    color: #f5f7fb !important;
+
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   NORMAL TEXT
+========================================================= */
+
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+
+body.dark p,
+body.dark span,
+body.dark li {
+
+    color: #cbd5e1 !important;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+body.dark-mode .navbar,
+body.dark .navbar {
+
+    background: #141b26 !important;
+
+    border-bottom: 1px solid #2c3747 !important;
+
+}
+
+
+/* LOGO */
+
+body.dark-mode .logo,
+body.dark .logo {
+
+    color: #ffffff !important;
+
+}
+
+
+/* NAV LINKS */
+
+body.dark-mode .navbar a,
+body.dark .navbar a {
+
+    color: #cbd5e1 !important;
+
+}
+
+
+body.dark-mode .navbar a:hover,
+body.dark .navbar a:hover {
+
+    color: #ffffff !important;
+
+    background: #273244 !important;
+
+}
+
+
+/* ACTIVE LINK */
+
+body.dark-mode .navbar a.active,
+body.dark .navbar a.active {
+
+    background: #2c3950 !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   THEME BUTTON
+========================================================= */
+
+body.dark-mode .theme-toggle,
+body.dark .theme-toggle {
+
+    background: #263247 !important;
+
+    color: #ffd45c !important;
+
+    border: 1px solid #3b485d !important;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+body.dark-mode .hero,
+body.dark .hero {
+
+    background: #0f151e !important;
+
+}
+
+
+body.dark-mode .hero h1,
+body.dark .hero h1 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .hero p,
+body.dark .hero p {
+
+    color: #cbd5e1 !important;
+
+}
+
+
+/* =========================================================
+   SMALL LABELS
+========================================================= */
+
+body.dark-mode .small-label,
+body.dark-mode .section-title span,
+body.dark-mode .section-label,
+
+body.dark .small-label,
+body.dark .section-title span,
+body.dark .section-label {
+
+    color: #aebbd0 !important;
+
+}
+
+
+/* =========================================================
+   FEATURE CARDS
+========================================================= */
+
+body.dark-mode .feature-card,
+body.dark .feature-card {
+
+    background: #1a222e !important;
+
+    border: 1px solid #303b4c !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .feature-card h3,
+body.dark .feature-card h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .feature-card p,
+body.dark .feature-card p {
+
+    color: #b9c5d5 !important;
+
+}
+
+
+body.dark-mode .feature-card .arrow,
+body.dark .feature-card .arrow {
+
+    color: #aebeff !important;
+
+}
+
+
+/* =========================================================
+   ALL COMMON CARDS
+========================================================= */
+
+body.dark-mode .card,
+body.dark-mode .memory-card,
+body.dark-mode .journey-card,
+body.dark-mode .timeline-card,
+body.dark-mode .reason-card,
+body.dark-mode .plant-card,
+body.dark-mode .surprise-card,
+
+body.dark .card,
+body.dark .memory-card,
+body.dark .journey-card,
+body.dark .timeline-card,
+body.dark .reason-card,
+body.dark .plant-card,
+body.dark .surprise-card {
+
+    background: #1a222e !important;
+
+    border-color: #303b4c !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* CARD HEADINGS */
+
+body.dark-mode .card h1,
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .memory-card h2,
+body.dark-mode .memory-card h3,
+body.dark-mode .journey-card h2,
+body.dark-mode .journey-card h3,
+body.dark-mode .timeline-card h2,
+body.dark-mode .timeline-card h3,
+body.dark-mode .reason-card h2,
+body.dark-mode .reason-card h3,
+
+body.dark .card h1,
+body.dark .card h2,
+body.dark .card h3,
+body.dark .memory-card h2,
+body.dark .memory-card h3,
+body.dark .journey-card h2,
+body.dark .journey-card h3,
+body.dark .timeline-card h2,
+body.dark .timeline-card h3,
+body.dark .reason-card h2,
+body.dark .reason-card h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+/* CARD TEXT */
+
+body.dark-mode .card p,
+body.dark-mode .memory-card p,
+body.dark-mode .journey-card p,
+body.dark-mode .timeline-card p,
+body.dark-mode .reason-card p,
+body.dark-mode .plant-card p,
+body.dark-mode .surprise-card p,
+
+body.dark .card p,
+body.dark .memory-card p,
+body.dark .journey-card p,
+body.dark .timeline-card p,
+body.dark .reason-card p,
+body.dark .plant-card p,
+body.dark .surprise-card p {
+
+    color: #bdc8d7 !important;
+
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+body.dark-mode .journey-section,
+body.dark-mode .journey-container,
+body.dark-mode .journey-preview,
+body.dark .journey-section,
+body.dark .journey-container,
+body.dark .journey-preview {
+
+    background: #0f151e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* Journey content */
+
+body.dark-mode .journey-content h1,
+body.dark-mode .journey-content h2,
+body.dark-mode .journey-content h3,
+body.dark .journey-content h1,
+body.dark .journey-content h2,
+body.dark .journey-content h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .journey-content p,
+body.dark .journey-content p {
+
+    color: #c0cad8 !important;
+
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+body.dark-mode .timeline-section,
+body.dark-mode .timeline-container,
+body.dark .timeline-section,
+body.dark .timeline-container {
+
+    background: #0f151e !important;
+
+}
+
+
+body.dark-mode .timeline-item,
+body.dark-mode .timeline-content,
+body.dark .timeline-item,
+body.dark .timeline-content {
+
+    background: #1a222e !important;
+
+    color: #ffffff !important;
+
+    border-color: #303b4c !important;
+
+}
+
+
+body.dark-mode .timeline-content h2,
+body.dark-mode .timeline-content h3,
+body.dark .timeline-content h2,
+body.dark .timeline-content h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .timeline-content p,
+body.dark .timeline-content p {
+
+    color: #bdc8d7 !important;
+
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+body.dark-mode .memories-section,
+body.dark-mode .memories-container,
+body.dark .memories-section,
+body.dark .memories-container {
+
+    background: #0f151e !important;
+
+}
+
+
+body.dark-mode .memory-tip,
+body.dark-mode .memory-tip-card,
+body.dark .memory-tip,
+body.dark .memory-tip-card {
+
+    background: #1a222e !important;
+
+    border-color: #303b4c !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .memory-tip h2,
+body.dark-mode .memory-tip h3,
+body.dark .memory-tip h2,
+body.dark .memory-tip h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .memory-tip p,
+body.dark .memory-tip p {
+
+    color: #bdc8d7 !important;
+
+}
+
+
+/* =========================================================
+   🎮 GAMES
+========================================================= */
+
+body.dark-mode .game-container,
+body.dark .game-container {
+
+    background: #1a222e !important;
+
+    border-color: #303b4c !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .game-container h1,
+body.dark-mode .game-container h2,
+body.dark-mode .game-container h3,
+body.dark .game-container h1,
+body.dark .game-container h2,
+body.dark .game-container h3 {
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .game-container p,
+body.dark .game-container p {
+
+    color: #bdc8d7 !important;
+
+}
+
+
+/* GAME STATS */
+
+body.dark-mode .game-stats,
+body.dark-mode .stat-box,
+body.dark-mode .game-stat,
+
+body.dark .game-stats,
+body.dark .stat-box,
+body.dark .game-stat {
+
+    background: #242d3b !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .game-stats *,
+body.dark-mode .stat-box *,
+body.dark-mode .game-stat *,
+
+body.dark .game-stats *,
+body.dark .stat-box *,
+body.dark .game-stat * {
+
+    color: #ffffff !important;
+
+}
+
+
+/* GAME BUTTONS */
+
+body.dark-mode .game-select,
+body.dark-mode .game-selector button,
+
+body.dark .game-select,
+body.dark .game-selector button {
+
+    background: #1c2532 !important;
+
+    color: #ffffff !important;
+
+    border-color: #3a4658 !important;
+
+}
+
+
+body.dark-mode .game-select:hover,
+body.dark-mode .game-selector button:hover,
+
+body.dark .game-select:hover,
+body.dark .game-selector button:hover {
+
+    background: #303c50 !important;
+
+}
+
+
+/* =========================================================
+   🌱 PLANT
+========================================================= */
+
+body.dark-mode .plant-section,
+body.dark-mode .plant-container,
+body.dark .plant-section,
+body.dark .plant-container {
+
+    background: #0f151e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .plant-display,
+body.dark-mode .plant-controls,
+body.dark .plant-display,
+body.dark .plant-controls {
+
+    background: #1a222e !important;
+
+    color: #ffffff !important;
+
+    border-color: #303b4c !important;
+
+}
+
+
+/* =========================================================
+   ✨ REASONS
+========================================================= */
+
+body.dark-mode .reasons-section,
+body.dark-mode .reasons-container,
+body.dark .reasons-section,
+body.dark .reasons-container {
+
+    background: #0f151e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .reason-card,
+body.dark .reason-card {
+
+    background: #1a222e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   🎁 SURPRISE
+========================================================= */
+
+body.dark-mode .surprise-section,
+body.dark-mode .surprise-container,
+body.dark .surprise-section,
+body.dark .surprise-container {
+
+    background: #0f151e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+body.dark-mode .surprise-card,
+body.dark .surprise-card {
+
+    background: #1a222e !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+body.dark-mode .secondary-btn,
+body.dark .secondary-btn {
+
+    background: #273244 !important;
+
+    color: #ffffff !important;
+
+    border-color: #3a4658 !important;
+
+}
+
+
+body.dark-mode .secondary-btn:hover,
+body.dark .secondary-btn:hover {
+
+    background: #354258 !important;
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+
+    background: #1a222e !important;
+
+    color: #ffffff !important;
+
+    border-color: #3a4658 !important;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+body.dark-mode footer,
+body.dark footer {
+
+    background: #141a23 !important;
+
+    color: #ffffff !important;
+
+    border-top: 1px solid #2c3747 !important;
+
+}
+
+
+body.dark-mode footer h1,
+body.dark-mode footer h2,
+body.dark-mode footer h3,
+body.dark-mode footer p,
+body.dark-mode footer small,
+
+body.dark footer h1,
+body.dark footer h2,
+body.dark footer h3,
+body.dark footer p,
+body.dark footer small {
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   REMOVE WHITE BACKGROUNDS FROM COMMON CONTAINERS
+========================================================= */
+
+body.dark-mode .section,
+body.dark-mode .container,
+body.dark-mode .content,
+body.dark-mode .page-section,
+
+body.dark .section,
+body.dark .container,
+body.dark .content,
+body.dark .page-section {
+
+    color: #ffffff !important;
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+body.dark-mode a,
+body.dark a {
+
+    color: #cbd5ff;
+
+}
+
+
+body.dark-mode a:hover,
+body.dark a:hover {
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   SMOOTH TRANSITION
+========================================================= */
+
+body,
+body *,
+body::before,
+body::after {
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+
+}
+
+/* =========================================
+   DARK MODE - COMPLETE FIX
+   ========================================= */
+
+body.dark-mode {
+    background: #0f141d;
+    color: #f4f7fb;
+}
+
+/* ---------- NAVBAR ---------- */
+
+body.dark-mode .navbar {
+    background: #151b26;
+    border-bottom: 1px solid #2b3545;
+}
+
+body.dark-mode .logo {
+    color: #ffffff;
+}
+
+body.dark-mode .navbar a {
+    color: #cbd5e1;
+}
+
+body.dark-mode .navbar a:hover,
+body.dark-mode .navbar a.active {
+    color: #ffffff;
+    background: #2d3a52;
+}
+
+/* ---------- NORMAL TEXT ---------- */
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode p,
+body.dark-mode span {
+    color: inherit;
+}
+
+/* ---------- HERO ---------- */
+
+body.dark-mode .hero {
+    background: #0f141d;
+}
+
+body.dark-mode .hero h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .hero p {
+    color: #cbd5e1;
+}
+
+/* ---------- FEATURE CARDS ---------- */
+
+body.dark-mode .feature-card {
+    background: #1a2230;
+    border: 1px solid #303b4d;
+    color: #ffffff;
+}
+
+body.dark-mode .feature-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .feature-card p {
+    color: #b8c3d4;
+}
+
+body.dark-mode .feature-card .arrow {
+    color: #ffffff;
+}
+
+body.dark-mode .feature-card:hover {
+    background: #222c3c;
+    border-color: #4b5d78;
+}
+
+/* ---------- JOURNEY ---------- */
+
+body.dark-mode .journey-preview {
+    background: #182131;
+    border: 1px solid #303b4d;
+}
+
+body.dark-mode .journey-preview h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .journey-preview p {
+    color: #c3cedd;
+}
+
+/* ---------- MOTIVATION ---------- */
+
+body.dark-mode .motivation-section,
+body.dark-mode .motivation-card {
+    color: #ffffff;
+}
+
+body.dark-mode .motivation-card {
+    background: #1a2230;
+    border: 1px solid #303b4d;
+}
+
+body.dark-mode .motivation-card h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .motivation-card p {
+    color: #c3cedd;
+}
+
+/* ---------- GAMES ---------- */
+
+body.dark-mode .games-header {
+    background: transparent;
+    color: #ffffff;
+}
+
+body.dark-mode .games-header h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .games-header h1 span {
+    color: #6f8cff;
+}
+
+body.dark-mode .games-header p {
+    color: #c3cedd;
+}
+
+/* Game container */
+
+body.dark-mode .game-container {
+    background: #192230;
+    border: 1px solid #354257;
+    color: #ffffff;
+}
+
+/* Game headings */
+
+body.dark-mode .game-container h2,
+body.dark-mode .game-container h3 {
+    color: #ffffff;
+}
+
+/* Game labels */
+
+body.dark-mode .game-label,
+body.dark-mode .game-container .game-label {
+    color: #8ea2ff;
+}
+
+/* Game description */
+
+body.dark-mode .game-container p {
+    color: #c7d1df;
+}
+
+/* ---------- GAME STATS ---------- */
+
+body.dark-mode .game-stat {
+    background: #222c3b;
+    border: 1px solid #354257;
+    color: #ffffff;
+}
+
+body.dark-mode .game-stat span {
+    color: #b9c5d6;
+}
+
+body.dark-mode .game-stat strong {
+    color: #ffffff;
+}
+
+/* ---------- MEMORY CARDS ---------- */
+
+body.dark-mode .memory-card {
+    background: #222a38;
+    border: 1px solid #3b485c;
+    color: #ffffff;
+}
+
+body.dark-mode .memory-card:hover {
+    background: #2a3547;
+}
+
+body.dark-mode .memory-card .card-content {
+    color: #ffffff;
+}
+
+/* Question mark */
+
+body.dark-mode .memory-card .question,
+body.dark-mode .memory-card span {
+    color: #ffffff;
+}
+
+/* ---------- GAME BUTTONS ---------- */
+
+body.dark-mode .game-select {
+    background: #1b2432;
+    border: 1px solid #39475c;
+    color: #dbe4f0;
+}
+
+body.dark-mode .game-select:hover {
+    background: #2b3850;
+    color: #ffffff;
+}
+
+body.dark-mode .game-select.active {
+    background: #ffffff;
+    color: #151b26;
+}
+
+/* Restart button */
+
+body.dark-mode .restart-btn,
+body.dark-mode button {
+    color: #ffffff;
+}
+
+/* ---------- TIC TAC TOE ---------- */
+
+body.dark-mode .tic-cell {
+    background: #222c3b;
+    border: 2px solid #46556d;
+    color: #ffffff;
+}
+
+body.dark-mode .tic-cell:hover {
+    background: #2c394d;
+}
+
+body.dark-mode .tic-cell.x {
+    color: #ff6685;
+}
+
+body.dark-mode .tic-cell.o {
+    color: #6fa8ff;
+}
+
+/* ---------- GUESS GAME ---------- */
+
+body.dark-mode .guess-box {
+    background: #222c3b;
+    border: 1px solid #3d4c63;
+    color: #ffffff;
+}
+
+body.dark-mode .guess-box h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .guess-box p {
+    color: #c3cedd;
+}
+
+body.dark-mode input {
+    background: #111823;
+    color: #ffffff;
+    border: 1px solid #46556d;
+}
+
+body.dark-mode input::placeholder {
+    color: #8491a5;
+}
+
+/* ---------- CATCH STAR ---------- */
+
+body.dark-mode .catch-area {
+    background: #111925;
+    border: 1px solid #3b485c;
+}
+
+body.dark-mode .star {
+    color: #ffd84d;
+}
+
+/* ---------- REASONS / MEMORIES / JOURNEY CARDS ---------- */
+
+body.dark-mode .card,
+body.dark-mode .reason-card,
+body.dark-mode .memory-section,
+body.dark-mode .journey-card,
+body.dark-mode .timeline-card {
+    background: #1a2230;
+    border-color: #354257;
+    color: #ffffff;
+}
+
+body.dark-mode .card h2,
+body.dark-mode .card h3,
+body.dark-mode .reason-card h2,
+body.dark-mode .reason-card h3,
+body.dark-mode .memory-section h2,
+body.dark-mode .memory-section h3,
+body.dark-mode .journey-card h2,
+body.dark-mode .journey-card h3,
+body.dark-mode .timeline-card h2,
+body.dark-mode .timeline-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .card p,
+body.dark-mode .reason-card p,
+body.dark-mode .memory-section p,
+body.dark-mode .journey-card p,
+body.dark-mode .timeline-card p {
+    color: #c4cfdd;
+}
+
+/* ---------- FOOTER ---------- */
+
+body.dark-mode footer {
+    background: #111722;
+    color: #ffffff;
+}
+
+body.dark-mode footer p,
+body.dark-mode footer small {
+    color: #aeb9c9;
+}
+
+/* ---------- THEME BUTTON ---------- */
+
+body.dark-mode .theme-toggle {
+    background: #27344a;
+    color: #ffffff;
+    border: 1px solid #3c4d68;
+}
+
+body.dark-mode .theme-toggle:hover {
+    background: #354661;
+    transform: rotate(15deg) scale(1.08);
+}

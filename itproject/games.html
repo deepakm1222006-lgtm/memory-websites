@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Game Zone | Small Gift</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="games.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            ✦ Small Gift
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="memories.html">Memories</a>
+            <a href="journey.html">Journey</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="games.html" class="active">Games</a>
+            <a href="plant.html">Plant</a>
+            <a href="reasons.html">Reasons</a>
+            <a href="surprise.html">Surprise</a>
+        </nav>
+
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle dark mode">
+            🌙
+        </button>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="games-page">
+
+        <!-- ================= HEADER ================= -->
+
+        <section class="games-header">
+
+            <span class="games-label">
+                🎮 GAME ZONE
+            </span>
+
+            <h1>
+                Let's Play,
+                <span>Ilakiyaa!</span> 👋
+            </h1>
+
+            <p>
+                Take a break, play a game, and try to beat your best score.
+            </p>
+
+        </section>
+
+
+        <!-- ================= GAME SELECTOR ================= -->
+
+        <div class="game-selector">
+
+            <button
+                class="game-select active"
+                data-game="memory">
+                🧠 Memory
+            </button>
+
+            <button
+                class="game-select"
+                data-game="guess">
+                🔢 Guess
+            </button>
+
+            <button
+                class="game-select"
+                data-game="tic">
+                ❌ Tic-Tac-Toe
+            </button>
+
+            <button
+                class="game-select"
+                data-game="star">
+                ⭐ Catch Star
+            </button>
+
+        </div>
+
+
+        <!-- =====================================================
+             MEMORY GAME
+        ====================================================== -->
+
+        <section
+            class="game-container"
+            id="memoryGame">
+
+            <div class="game-heading">
+
+                <div>
+                    <span class="game-label">
+                        MEMORY MATCH
+                    </span>
+
+                    <h2>
+                        Find the matching pairs 🧠
+                    </h2>
+                </div>
+
+                <button
+                    class="restart-btn"
+                    id="memoryRestart">
+                    🔄 Restart
+                </button>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span>Moves</span>
+                    <strong id="memoryMoves">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Matches</span>
+                    <strong id="memoryMatches">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>Best</span>
+                    <strong id="memoryBest">--</strong>
+                </div>
+
+            </div>
+
+
+            <div
+                class="memory-board"
+                id="memoryBoard">
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             GUESS GAME
+        ====================================================== -->
+
+        <section
+            class="game-container hidden"
+            id="guessGame">
+
+            <div class="game-heading">
+
+                <div>
+                    <span class="game-label">
+                        NUMBER CHALLENGE
+                    </span>
+
+                    <h2>
+                        Guess the secret number 🔢
+                    </h2>
+                </div>
+
+                <button
+                    class="restart-btn"
+                    id="guessRestart">
+                    🔄 Restart
+                </button>
+
+            </div>
+
+
+            <div class="guess-content">
+
+                <p>
+                    I'm thinking of a number between
+                    <strong>1 and 100</strong>.
+                </p>
+
+                <div class="guess-input">
+
+                    <input
+                        type="number"
+                        id="guessInput"
+                        min="1"
+                        max="100"
+                        placeholder="Enter number">
+
+                    <button
+                        id="guessButton"
+                        class="primary-game-btn">
+                        Guess
+                    </button>
+
+                </div>
+
+                <div
+                    class="game-message"
+                    id="guessMessage">
+                    Make your first guess!
+                </div>
+
+                <div class="guess-info">
+
+                    <div>
+                        Attempts
+                        <strong id="guessAttempts">0</strong>
+                    </div>
+
+                    <div>
+                        Best
+                        <strong id="guessBest">--</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TIC TAC TOE
+        ====================================================== -->
+
+        <section
+            class="game-container hidden"
+            id="ticGame">
+
+            <div class="game-heading">
+
+                <div>
+                    <span class="game-label">
+                        STRATEGY GAME
+                    </span>
+
+                    <h2>
+                        Tic-Tac-Toe ❌⭕
+                    </h2>
+                </div>
+
+                <button
+                    class="restart-btn"
+                    id="ticRestart">
+                    🔄 Restart
+                </button>
+
+            </div>
+
+
+            <div class="tic-content">
+
+                <p id="ticStatus">
+                    Your turn — you are X
+                </p>
+
+                <div
+                    class="tic-board"
+                    id="ticBoard">
+
+                    <button class="tic-cell" data-index="0"></button>
+                    <button class="tic-cell" data-index="1"></button>
+                    <button class="tic-cell" data-index="2"></button>
+
+                    <button class="tic-cell" data-index="3"></button>
+                    <button class="tic-cell" data-index="4"></button>
+                    <button class="tic-cell" data-index="5"></button>
+
+                    <button class="tic-cell" data-index="6"></button>
+                    <button class="tic-cell" data-index="7"></button>
+                    <button class="tic-cell" data-index="8"></button>
+
+                </div>
+
+                <div class="tic-score">
+
+                    <div>
+                        You
+                        <strong id="playerScore">0</strong>
+                    </div>
+
+                    <div>
+                        Computer
+                        <strong id="computerScore">0</strong>
+                    </div>
+
+                    <div>
+                        Draws
+                        <strong id="drawScore">0</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CATCH STAR
+        ====================================================== -->
+
+        <section
+            class="game-container hidden"
+            id="starGame">
+
+            <div class="game-heading">
+
+                <div>
+                    <span class="game-label">
+                        QUICK CHALLENGE
+                    </span>
+
+                    <h2>
+                        Catch the falling stars ⭐
+                    </h2>
+                </div>
+
+                <button
+                    class="restart-btn"
+                    id="starRestart">
+                    🔄 Restart
+                </button>
+
+            </div>
+
+
+            <div class="star-info">
+
+                <div>
+                    Score
+                    <strong id="starScore">0</strong>
+                </div>
+
+                <div>
+                    Time
+                    <strong id="starTime">20</strong>
+                </div>
+
+                <div>
+                    Best
+                    <strong id="starBest">0</strong>
+                </div>
+
+            </div>
+
+
+            <div
+                class="star-arena"
+                id="starArena">
+
+                <div class="star-start" id="starStart">
+                    <span>⭐</span>
+
+                    <h3>
+                        Ready?
+                    </h3>
+
+                    <p>
+                        Click as many stars as you can in 20 seconds.
+                    </p>
+
+                    <button
+                        class="primary-game-btn"
+                        id="startStar">
+                        Start Game
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BOTTOM MESSAGE ================= -->
+
+        <section class="games-footer-card">
+
+            <div class="games-footer-icon">
+                🎮
+            </div>
+
+            <div>
+
+                <span>
+                    GAME COLLECTION
+                </span>
+
+                <h2>
+                    Pick a game and have some fun!
+                </h2>
+
+                <p>
+                    Memory, guessing, strategy and quick challenges —
+                    your little game zone is getting bigger.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🌱 Ilakiyaa's World
+        </div>
+
+        <p>
+            Made with memories, fun and good vibes.
+        </p>
+
+        <small>
+            © 2026 • Little World Project
+        </small>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="main.js"></script>
+    <script src="games.js"></script>
+
+</body>
+
+</html>
