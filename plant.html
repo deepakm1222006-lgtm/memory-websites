@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Plant | Small Gift</title>
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="journey.css">
+
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- 🌙 MUST BE LAST -->
+    <link rel="stylesheet" href="darkmode.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+    <div class="logo">
+        ✦ Small Gift
+    </div>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="memories.html">Memories</a>
+
+        <a href="journey.html">Journey</a>
+
+        <a href="timeline.html">Timeline</a>
+
+        <a href="games.html">Games</a>
+
+        <a href="plant.html">Plant</a>
+
+        <a href="reasons.html">Reasons</a>
+
+        <a href="surprise.html">Surprise</a>
+
+    </nav>
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle dark mode"
+    >
+        🌙
+    </button>
+
+</header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="plant-hero">
+
+            <div class="plant-hero-content">
+
+                <span class="small-label">
+                    🌱 LITTLE GARDEN
+                </span>
+
+                <h1>
+                    One little plant,
+                    <span>one new chapter.</span>
+                </h1>
+
+                <p>
+                    Just like starting college in a new city,
+                    a small beginning can grow into something
+                    amazing with a little care.
+                </p>
+
+            </div>
+
+            <div class="plant-hero-art">
+                🌱
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLANT GAME ================= -->
+
+        <section class="plant-game-section">
+
+            <div class="section-title">
+
+                <span>
+                    🌿 MINI GAME
+                </span>
+
+                <h2>
+                    Take Care of Your Plant
+                </h2>
+
+                <p>
+                    Give it what it needs and watch it grow.
+                </p>
+
+            </div>
+
+
+            <div class="plant-game">
+
+
+                <!-- PLANT -->
+
+                <div class="plant-display">
+
+                    <div
+                        class="plant-pot"
+                        id="plantPot"
+                    >
+
+                        <div
+                            class="plant-stem"
+                            id="plantStem"
+                        >
+
+                            <div class="leaf leaf-left">
+                                🍃
+                            </div>
+
+                            <div class="leaf leaf-right">
+                                🍃
+                            </div>
+
+                            <div
+                                class="plant-flower"
+                                id="plantFlower"
+                            >
+                                🌱
+                            </div>
+
+                        </div>
+
+
+                        <div class="pot">
+                            🪴
+                        </div>
+
+                    </div>
+
+
+                    <h3 id="plantStage">
+                        Tiny Sprout
+                    </h3>
+
+                    <p id="plantMessage">
+                        Every big plant starts small.
+                    </p>
+
+
+                    <!-- PROGRESS -->
+
+                    <div class="plant-progress">
+
+                        <div
+                            class="plant-progress-bar"
+                            id="plantProgress"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="plant-level">
+
+                        Growth:
+                        <strong id="growthValue">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+
+                <div class="plant-controls">
+
+                    <h3>
+                        What does the plant need?
+                    </h3>
+
+
+                    <div class="plant-actions">
+
+
+                        <button
+                            class="plant-action"
+                            id="waterBtn"
+                        >
+
+                            <span>
+                                💧
+                            </span>
+
+                            <strong>
+                                Water
+                            </strong>
+
+                            <small>
+                                +10 Growth
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            class="plant-action"
+                            id="sunBtn"
+                        >
+
+                            <span>
+                                ☀️
+                            </span>
+
+                            <strong>
+                                Sunlight
+                            </strong>
+
+                            <small>
+                                +10 Growth
+                            </small>
+
+                        </button>
+
+
+                        <button
+                            class="plant-action"
+                            id="talkBtn"
+                        >
+
+                            <span>
+                                💬
+                            </span>
+
+                            <strong>
+                                Encouragement
+                            </strong>
+
+                            <small>
+                                +5 Growth
+                            </small>
+
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        class="plant-status"
+                        id="plantStatus"
+                    >
+                        Your plant is waiting for some care. 🌱
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PLANT MEANING ================= -->
+
+        <section class="plant-meaning">
+
+            <div class="plant-meaning-card">
+
+                <div class="plant-meaning-icon">
+                    🌿
+                </div>
+
+                <div>
+
+                    <span>
+                        THE IDEA
+                    </span>
+
+                    <h2>
+                        Small things need time.
+                    </h2>
+
+                    <p>
+                        A plant doesn't grow overnight.
+                        Neither does a new chapter.
+                        Give yourself time to learn,
+                        adapt and enjoy the process.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <div class="footer-logo">
+                🌱 Ilakiyaa's World
+            </div>
+
+            <p>
+                New place. New experiences. Keep growing.
+            </p>
+
+            <small>
+                © 2026 • Little World Project
+            </small>
+
+        </footer>
+
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="main.js"></script>
+
+    <script>
+
+        /* ================================================
+           PLANT GAME
+        ================================================ */
+
+
+        let growth = 0;
+
+
+        const growthValue =
+            document.getElementById(
+                "growthValue"
+            );
+
+
+        const progress =
+            document.getElementById(
+                "plantProgress"
+            );
+
+
+        const stage =
+            document.getElementById(
+                "plantStage"
+            );
+
+
+        const message =
+            document.getElementById(
+                "plantMessage"
+            );
+
+
+        const status =
+            document.getElementById(
+                "plantStatus"
+            );
+
+
+        const flower =
+            document.getElementById(
+                "plantFlower"
+            );
+
+
+        const stem =
+            document.getElementById(
+                "plantStem"
+            );
+
+
+        function updatePlant() {
+
+            growth =
+                Math.min(
+                    growth,
+                    100
+                );
+
+
+            growthValue.textContent =
+                growth + "%";
+
+
+            progress.style.width =
+                growth + "%";
+
+
+            /* ---------------- STAGE 1 ---------------- */
+
+            if (growth < 25) {
+
+                stage.textContent =
+                    "Tiny Sprout 🌱";
+
+                message.textContent =
+                    "Every big plant starts small.";
+
+                flower.textContent =
+                    "🌱";
+
+            }
+
+
+            /* ---------------- STAGE 2 ---------------- */
+
+            else if (growth < 50) {
+
+                stage.textContent =
+                    "Growing Plant 🌿";
+
+                message.textContent =
+                    "Look! Something is growing.";
+
+                flower.textContent =
+                    "🌿";
+
+            }
+
+
+            /* ---------------- STAGE 3 ---------------- */
+
+            else if (growth < 75) {
+
+                stage.textContent =
+                    "Healthy Plant 🌳";
+
+                message.textContent =
+                    "Your little plant is getting stronger.";
+
+                flower.textContent =
+                    "🌳";
+
+            }
+
+
+            /* ---------------- STAGE 4 ---------------- */
+
+            else if (growth < 100) {
+
+                stage.textContent =
+                    "Almost There! 🌺";
+
+                message.textContent =
+                    "Just a little more care.";
+
+                flower.textContent =
+                    "🌺";
+
+            }
+
+
+            /* ---------------- COMPLETE ---------------- */
+
+            else {
+
+                stage.textContent =
+                    "Fully Grown! 🌸";
+
+                message.textContent =
+                    "You did it! The plant is thriving.";
+
+                flower.textContent =
+                    "🌸";
+
+                status.textContent =
+                    "🎉 Your plant has reached full growth!";
+
+            }
+
+        }
+
+
+        /* ================================================
+           WATER
+        ================================================ */
+
+        document
+            .getElementById("waterBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    if (growth >= 100) return;
+
+                    growth += 10;
+
+                    updatePlant();
+
+                    status.textContent =
+                        "💧 Nice! Your plant got some water.";
+
+                }
+            );
+
+
+        /* ================================================
+           SUNLIGHT
+        ================================================ */
+
+        document
+            .getElementById("sunBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    if (growth >= 100) return;
+
+                    growth += 10;
+
+                    updatePlant();
+
+                    status.textContent =
+                        "☀️ Perfect! Your plant enjoyed the sunlight.";
+
+                }
+            );
+
+
+        /* ================================================
+           ENCOURAGEMENT
+        ================================================ */
+
+        document
+            .getElementById("talkBtn")
+            .addEventListener(
+                "click",
+                function () {
+
+                    if (growth >= 100) return;
+
+                    growth += 5;
+
+                    updatePlant();
+
+                    status.textContent =
+                        "💬 Your plant feels encouraged!";
+
+                }
+            );
+
+
+        updatePlant();
+
+    </script>
+
+</body>
+
+</html>
