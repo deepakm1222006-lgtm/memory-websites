@@ -12,15 +12,6 @@
 
     <title>Timeline | Small Gift</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="journey.css">
-
-    <link rel="stylesheet" href="animations.css">
-
-    <!-- 🌙 MUST BE LAST -->
-    <link rel="stylesheet" href="darkmode.css">
-
 </head>
 
 
@@ -655,12 +646,6 @@
 
     <script>
 
-
-        // =================================================
-        // COUNTDOWN
-        // =================================================
-
-
         const collegeStart =
             new Date(
                 "September 1, 2026 09:00:00"
@@ -669,21 +654,17 @@
 
         function updateCountdown() {
 
-
             const now =
                 new Date().getTime();
 
-
             const difference =
                 collegeStart - now;
-
 
             const days =
                 Math.floor(
                     difference /
                     (1000 * 60 * 60 * 24)
                 );
-
 
             const hours =
                 Math.floor(
@@ -692,14 +673,12 @@
                     (1000 * 60 * 60)
                 );
 
-
             const minutes =
                 Math.floor(
                     (difference %
                         (1000 * 60 * 60)) /
                     (1000 * 60)
                 );
-
 
             const seconds =
                 Math.floor(
@@ -708,104 +687,78 @@
                     1000
                 );
 
-
             if (difference <= 0) {
-
 
                 document.getElementById(
                     "days"
                 ).textContent = "00";
 
-
                 document.getElementById(
                     "hours"
                 ).textContent = "00";
-
 
                 document.getElementById(
                     "minutes"
                 ).textContent = "00";
 
-
                 document.getElementById(
                     "seconds"
                 ).textContent = "00";
-
 
                 document.getElementById(
                     "countdownMessage"
                 ).textContent =
                     "🎒 The new chapter has begun!";
 
-
                 return;
-
             }
-
 
             document.getElementById(
                 "days"
             ).textContent =
                 String(days).padStart(2, "0");
 
-
             document.getElementById(
                 "hours"
             ).textContent =
                 String(hours).padStart(2, "0");
-
 
             document.getElementById(
                 "minutes"
             ).textContent =
                 String(minutes).padStart(2, "0");
 
-
             document.getElementById(
                 "seconds"
             ).textContent =
                 String(seconds).padStart(2, "0");
-
         }
 
-
         updateCountdown();
-
 
         setInterval(
             updateCountdown,
             1000
         );
 
-
-
-        // =================================================
-        // CHECKPOINT
-        // =================================================
-
-
         const checkpointButton =
             document.getElementById(
                 "checkpointBtn"
             );
-
 
         const checkpointStatus =
             document.getElementById(
                 "checkpointStatus"
             );
 
-
         checkpointButton.addEventListener(
             "click",
             function () {
-
 
                 localStorage.setItem(
                     "chapterMarked",
                     "true"
                 );
-
 
                 checkpointStatus.textContent =
                     "✅ Chapter marked! Come back later and see how far you've travelled.";
@@ -813,15 +766,11 @@
                 checkpointButton.textContent =
                     "✓ Chapter Saved";
 
-
                 checkpointButton.disabled =
                     true;
 
             }
         );
-
-
-        // Restore saved state
 
         if (
             localStorage.getItem(
@@ -839,7 +788,6 @@
                 "Your chapter is already marked. 🌱";
 
         }
-
 
     </script>
 
