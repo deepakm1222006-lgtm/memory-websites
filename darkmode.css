@@ -1,45 +1,150 @@
+/* =========================================================
+   🌙 DARK MODE – COMPLETE SITE POLISH
+   Keeps every section aligned and readable in dark mode
+   ========================================================= */
 
-/* =====================================================
-   🌙 DARK MODE GLOBAL REFINEMENT
-   Stronger visual consistency across cards and panels
-   ===================================================== */
+body.dark-mode,
+body[data-theme="dark"] {
+  background: #0b1117 !important;
+  color: #edf2f7 !important;
+}
 
+body.dark-mode .navbar,
 body.dark-mode .feature-card,
 body.dark-mode .goal-card,
-body.dark-mode .journey-preview,
-body.dark-mode .motivation-card,
+body.dark-mode .journey-card,
 body.dark-mode .message-box,
 body.dark-mode .countdown-card,
 body.dark-mode .timeline-content,
 body.dark-mode .memory-card,
-body.dark-mode .memory-note,
-body.dark-mode .card,
-body.dark-mode .journey-card,
-body.dark-mode .reason-card,
+body.dark-mode .birthday-card,
+body.dark-mode .roadmap-card,
+body.dark-mode .surprise-card,
 body.dark-mode .plant-card,
-body.dark-mode .surprise-card {
-    background: rgba(20, 29, 38, 0.92) !important;
-    border-color: rgba(148, 163, 184, 0.18) !important;
-    box-shadow: 0 18px 38px rgba(2, 6, 12, 0.28) !important;
+body.dark-mode .reason-card,
+body.dark-mode .card {
+  background: rgba(16, 24, 31, 0.92) !important;
+  border-color: rgba(148, 163, 184, 0.16) !important;
+  box-shadow: 0 20px 40px rgba(2, 6, 12, 0.26) !important;
+}
+
+body.dark-mode .navbar {
+  background: rgba(11, 17, 23, 0.78) !important;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16) !important;
+}
+
+body.dark-mode .logo,
+body.dark-mode .hero h1,
+body.dark-mode .journey-hero-content h1,
+body.dark-mode .timeline-hero-content h1,
+body.dark-mode .section-title h2,
+body.dark-mode .memory-heading h2,
+body.dark-mode .feature-card h3,
+body.dark-mode .goal-card h3,
+body.dark-mode .roadmap-card h3,
+body.dark-mode .birthday-card h2,
+body.dark-mode .message-box h2,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #f8fbff !important;
+}
+
+body.dark-mode .navbar nav a,
+body.dark-mode .hero p,
+body.dark-mode .journey-hero-content p,
+body.dark-mode .timeline-hero-content p,
+body.dark-mode .feature-card p,
+body.dark-mode .goal-card p,
+body.dark-mode .birthday-card p,
+body.dark-mode .memory-info p,
+body.dark-mode .roadmap-card p,
+body.dark-mode .section-title p,
+body.dark-mode .message-box p,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode small,
+body.dark-mode .muted {
+  color: #c6d0dc !important;
+}
+
+body.dark-mode .navbar nav a {
+  color: #dfe7f3 !important;
 }
 
 body.dark-mode .navbar nav a:hover,
 body.dark-mode .navbar nav a.active {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  background: rgba(94, 113, 144, 0.18) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
 }
 
+body.dark-mode .theme-toggle,
 body.dark-mode .primary-btn,
 body.dark-mode .secondary-btn {
-    box-shadow: 0 12px 28px rgba(2, 6, 12, 0.2);
+  box-shadow: 0 12px 26px rgba(2, 6, 12, 0.18);
 }
 
-body.dark-mode .section-title > span,
+body.dark-mode .theme-toggle {
+  background: rgba(35, 45, 56, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+  color: #ffd76d !important;
+}
+
+body.dark-mode .primary-btn {
+  background: linear-gradient(135deg, #d8884f, #b86a3d) !important;
+}
+
+body.dark-mode .secondary-btn {
+  background: rgba(20, 31, 38, 0.9) !important;
+  border-color: rgba(148, 163, 184, 0.18) !important;
+  color: #edf2f7 !important;
+}
+
+body.dark-mode .main-illustration,
+body.dark-mode .travel-bag,
+body.dark-mode .clock-circle,
+body.dark-mode .floating-card,
+body.dark-mode .city-card,
+body.dark-mode .memory-number,
+body.dark-mode .feature-icon,
+body.dark-mode .goal-icon,
+body.dark-mode .message-icon,
+body.dark-mode .birthday-icon {
+  background: linear-gradient(135deg, rgba(25, 34, 43, 0.96), rgba(38, 49, 60, 0.94)) !important;
+  border-color: rgba(148, 163, 184, 0.16) !important;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.18) !important;
+}
+
 body.dark-mode .small-label,
 body.dark-mode .section-label,
-body.dark-mode .memory-note span,
+body.dark-mode .section-title span,
+body.dark-mode .birthday-tag,
+body.dark-mode .memory-info span,
 body.dark-mode .journey-badge,
-body.dark-mode .start-date,
-body.dark-mode .timeline-content span,
-body.dark-mode .memory-info span {
-    opacity: 0.95;
+body.dark-mode .memory-badge,
+body.dark-mode .start-date {
+  color: #f4b98a !important;
+}
+
+body.dark-mode .roadmap-tags span {
+  background: rgba(184, 106, 61, 0.12) !important;
+  border-color: rgba(184, 106, 61, 0.18) !important;
+  color: #f4caa8 !important;
+}
+
+body.dark-mode .navbar nav a:hover,
+body.dark-mode .navbar nav a.active {
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+body.dark-mode .hero-art,
+body.dark-mode .journey-hero-art,
+body.dark-mode .timeline-clock {
+  background: radial-gradient(circle at top, rgba(202, 120, 69, 0.18), rgba(16, 24, 31, 0.7) 42%, rgba(13, 18, 23, 0.36) 100%) !important;
+  border-color: rgba(148, 163, 184, 0.12) !important;
 }
