@@ -1,99 +1,77 @@
-// =====================================================
-// 🌱 ILakiyaa's LITTLE WORLD - MAIN JS
-// =====================================================
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('page-loaded');
 
-console.log("🌱 Main JS loaded!");
+  const themeToggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme');
 
-// =====================================================
-// DAILY MOTIVATION
-// =====================================================
+  const applyTheme = (theme) => {
+    const isDark = theme === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+    document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
 
-const quotes = [
-    "Small progress is still progress.",
-    "You don't have to be perfect. Just keep going.",
-    "One good day can start with one small step.",
-    "Learn something new today.",
-    "Your future self will thank you for today's effort.",
-    "Take a break when you need one. Then continue.",
-    "Try. Learn. Improve. Repeat.",
-    "A new place can create new memories.",
-    "Don't compare your chapter with someone else's.",
-    "Keep moving forward. 🚀",
-    "Make today a little better than yesterday.",
-    "You are allowed to start small."
-];
+    if (themeToggle) {
+      themeToggle.textContent = isDark ? '☀️' : '🌙';
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+  };
 
-const quoteElement = document.getElementById("dailyQuote");
-const quoteButton = document.getElementById("newQuote");
+  if (savedTheme === 'dark') {
+    applyTheme('dark');
+  } else {
+    applyTheme('light');
+  }
 
-if (quoteButton && quoteElement) {
-    quoteButton.addEventListener("click", function () {
-        const randomIndex = Math.floor(Math.random() * quotes.length);
-        quoteElement.textContent = quotes[randomIndex];
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+      localStorage.setItem('theme', nextTheme);
+      applyTheme(nextTheme);
     });
-}
+  }
 
-// =====================================================
-// NAVBAR SCROLL EFFECT
-// =====================================================
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const setNavbarState = () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 18);
+    };
+    setNavbarState();
+    window.addEventListener('scroll', setNavbarState, { passive: true });
+  }
 
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", function () {
-    if (!navbar) return;
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
-
-// =====================================================
-// DARK MODE
-// =====================================================
-
-const themeToggle = document.getElementById("themeToggle");
-
-if (themeToggle) {
-    function updateThemeButton() {
-        const isDark = document.body.classList.contains("dark-mode");
-        themeToggle.textContent = isDark ? "☀️" : "🌙";
-    }
-
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-    }
-
-    updateThemeButton();
-
-    themeToggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark-mode");
-
-        const isDark = document.body.classList.contains("dark-mode");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-        updateThemeButton();
-    });
-}
-
-// =====================================================
-// ACTIVE NAVIGATION
-// =====================================================
-
-const currentPage = window.location.pathname.split("/").pop().toLowerCase();
-const navLinks = document.querySelectorAll(".navbar nav a");
-
-navLinks.forEach(function (link) {
-    const linkPage = link.getAttribute("href").split("/").pop().toLowerCase();
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.navbar nav a');
+  navLinks.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkPage = href.split('/').pop() || 'index.html';
     if (linkPage === currentPage) {
-        link.classList.add("active");
+      link.classList.add('active');
     }
-});
+  });
 
-// =====================================================
-// PAGE LOADING EFFECT
-// =====================================================
+  const quoteElement = document.getElementById('dailyQuote');
+  const quoteButton = document.getElementById('newQuote');
+  const quotes = [
+    'Small progress is still progress.',
+    'You do not have to be perfect. Just keep going.',
+    'One good day can start with one small step.',
+    'Learn something new today.',
+    'Your future self will thank you for today\'s effort.',
+    'Take a break when you need one. Then continue.',
+    'Try. Learn. Improve. Repeat.',
+    'A new place can create new memories.',
+    'Do not compare your chapter with someone else\'s.',
+    'Keep moving forward. 🚀',
+    'Make today a little better than yesterday.',
+    'You are allowed to start small.'
+  ];
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("page-loaded");
+  if (quoteButton && quoteElement) {
+    const updateQuote = () => {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteElement.textContent = quotes[randomIndex];
+    };
+    updateQuote();
+    quoteButton.addEventListener('click', updateQuote);
+  }
 });
