@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Memories | Small Gift</title>
 
     <link rel="stylesheet" href="style.css">
@@ -13,31 +12,45 @@
 
     <style>
         :root {
-            --bg: #f6efe6;
-            --panel: #fffaf5;
-            --panel-strong: #f4e7d5;
-            --ink: #2b1d12;
-            --muted: #654f3e;
-            --accent: #b46b3d;
-            --accent-soft: #efe0d0;
-            --shadow: rgba(74, 46, 27, 0.12);
-            --line: rgba(71, 51, 38, 0.12);
+            --page-bg: #f5efe8;
+            --bg-soft: #f8f3ee;
+            --panel: #fffdfb;
+            --panel-strong: #f3e7d9;
+            --ink: #1f1a17;
+            --muted: #5f4d42;
+            --accent: #b86a3d;
+            --accent-strong: #8d4d26;
+            --accent-soft: #f3e1d2;
+            --line: rgba(90, 67, 54, 0.14);
+            --shadow: rgba(73, 47, 31, 0.12);
+            --shadow-strong: rgba(53, 33, 20, 0.15);
         }
 
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background: linear-gradient(180deg, #f8f1e9 0%, #f5efe8 100%);
+            background: linear-gradient(180deg, #f8f1e9 0%, var(--page-bg) 100%);
             color: var(--ink);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
         img {
-            max-width: 100%;
             display: block;
+            width: 100%;
+            max-width: 100%;
         }
 
         .navbar {
@@ -47,14 +60,22 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 18px;
             padding: 18px 7%;
-            background: rgba(255, 250, 245, 0.8);
-            backdrop-filter: blur(18px);
+            background: rgba(255, 251, 247, 0.8);
             border-bottom: 1px solid var(--line);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            transition: box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 14px 30px rgba(52, 36, 25, 0.08);
+            background: rgba(255, 251, 247, 0.92);
         }
 
         .logo {
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             font-weight: 800;
             letter-spacing: 0.06em;
             color: var(--ink);
@@ -63,34 +84,44 @@
         .navbar nav {
             display: flex;
             align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
         }
 
         .navbar nav a {
             padding: 10px 14px;
             border-radius: 999px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
-            text-decoration: none;
+            letter-spacing: 0.01em;
             color: var(--muted);
             transition: all 0.25s ease;
         }
 
         .navbar nav a:hover,
         .navbar nav a.active {
-            background: rgba(180, 107, 61, 0.08);
+            background: rgba(184, 106, 61, 0.1);
             color: var(--ink);
         }
 
         .theme-toggle {
-            border: 1px solid var(--line);
-            background: rgba(255,255,255,0.6);
-            border-radius: 50%;
             width: 42px;
             height: 42px;
-            font-size: 1.1rem;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
             cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-1px);
+            border-color: rgba(184, 106, 61, 0.3);
         }
 
         main {
@@ -101,26 +132,26 @@
 
         .memory-hero {
             display: grid;
-            grid-template-columns: 1.3fr 0.7fr;
+            grid-template-columns: 1.35fr 0.65fr;
             align-items: center;
-            gap: 32px;
-            padding: 32px 16px 18px;
+            gap: 30px;
+            padding: 26px 14px 18px;
         }
 
         .small-label,
         .section-label {
             display: inline-block;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
             font-size: 0.72rem;
             font-weight: 800;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
             color: var(--accent);
         }
 
         .memory-hero h1 {
             margin: 18px 0 14px;
-            font-size: clamp(2.7rem, 6vw, 5.4rem);
-            line-height: 0.95;
+            font-size: clamp(2.7rem, 5vw, 5.2rem);
+            line-height: 0.94;
             letter-spacing: -0.08em;
             font-family: Georgia, "Times New Roman", serif;
             color: var(--ink);
@@ -138,7 +169,7 @@
             margin: 0;
             font-size: 1.08rem;
             color: var(--muted);
-            line-height: 1.7;
+            line-height: 1.75;
         }
 
         .memory-badge {
@@ -148,13 +179,13 @@
             margin-top: 22px;
             padding: 10px 16px;
             border-radius: 999px;
-            background: rgba(180, 107, 61, 0.08);
-            border: 1px solid rgba(180, 107, 61, 0.14);
-            color: var(--accent);
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
+            background: rgba(184, 106, 61, 0.08);
+            border: 1px solid rgba(184, 106, 61, 0.14);
+            color: var(--accent-strong);
+            font-size: 0.7rem;
             font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
         }
 
         .memory-hero-icon {
@@ -162,14 +193,14 @@
             align-items: center;
             justify-content: center;
             min-height: 260px;
-            border-radius: 24px;
-            background: radial-gradient(circle at top, rgba(195,130,85,0.16), rgba(255,255,255,0.5) 40%, rgba(255,255,255,0.2) 100%);
-            font-size: clamp(5rem, 12vw, 9rem);
-            box-shadow: inset 0 0 0 1px rgba(90,69,57,0.07);
+            border-radius: 28px;
+            background: radial-gradient(circle at top, rgba(184, 106, 61, 0.16), rgba(255, 255, 255, 0.88) 42%, rgba(255, 255, 255, 0.2) 100%);
+            box-shadow: inset 0 0 0 1px rgba(87, 63, 46, 0.08);
+            font-size: clamp(5rem, 10vw, 8rem);
         }
 
         .memory-section {
-            margin-top: 10px;
+            margin-top: 16px;
             padding: 24px 16px 0;
         }
 
@@ -184,20 +215,20 @@
         .memory-heading h2 {
             margin: 10px 0 0;
             font-size: clamp(2rem, 4vw, 3rem);
-            line-height: 1.1;
-            letter-spacing: -0.05em;
+            line-height: 1.08;
+            letter-spacing: -0.06em;
             color: var(--ink);
             font-family: Georgia, "Times New Roman", serif;
         }
 
         .memory-count {
+            padding: 12px 18px;
             background: var(--panel);
             border: 1px solid var(--line);
             border-radius: 999px;
-            padding: 12px 18px;
-            font-size: 0.9rem;
+            box-shadow: 0 12px 28px var(--shadow);
             color: var(--muted);
-            box-shadow: 0 8px 22px var(--shadow);
+            font-size: 0.88rem;
         }
 
         .memory-count strong {
@@ -208,26 +239,27 @@
         .memory-grid {
             display: grid;
             grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 24px;
+            gap: 22px;
         }
 
         .memory-card {
-            background: rgba(255,255,255,0.4);
-            border: 1px solid rgba(90,69,57,0.08);
+            background: rgba(255, 255, 255, 0.58);
+            border: 1px solid rgba(90, 69, 57, 0.08);
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 18px 35px rgba(44, 33, 24, 0.08);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 18px 32px rgba(45, 34, 26, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
         .memory-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 24px 42px rgba(44, 33, 24, 0.12);
+            box-shadow: 0 24px 42px rgba(45, 34, 26, 0.12);
+            border-color: rgba(184, 106, 61, 0.2);
         }
 
         .memory-image {
             position: relative;
-            background: linear-gradient(135deg, #efe6d7, #f9f3ee);
+            background: linear-gradient(135deg, #efe6d7, #f9f4ee);
         }
 
         .memory-image img {
@@ -235,24 +267,25 @@
             height: 270px;
             object-fit: cover;
             display: block;
+            background: linear-gradient(135deg, #f0e5d9, #f9f5f1);
         }
 
         .memory-number {
             position: absolute;
-            top: 16px;
-            left: 16px;
+            top: 14px;
+            left: 14px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             min-width: 52px;
             height: 30px;
-            border-radius: 999px;
             padding: 0 12px;
-            background: rgba(33, 24, 18, 0.72);
+            border-radius: 999px;
+            background: rgba(29, 22, 18, 0.72);
             color: #fff;
-            font-size: 0.7rem;
-            letter-spacing: 0.12em;
+            font-size: 0.72rem;
             font-weight: 700;
+            letter-spacing: 0.12em;
         }
 
         .memory-info {
@@ -262,32 +295,33 @@
         .memory-info span {
             display: inline-block;
             margin-bottom: 10px;
-            font-size: 0.7rem;
-            letter-spacing: 0.12em;
             color: var(--accent);
+            font-size: 0.7rem;
             font-weight: 800;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
         .memory-info h3 {
             margin: 0 0 10px;
             font-size: 1.45rem;
+            line-height: 1.2;
             letter-spacing: -0.04em;
             color: var(--ink);
-            line-height: 1.2;
             font-family: Georgia, "Times New Roman", serif;
         }
 
         .memory-info p {
             margin: 0 0 14px;
             color: var(--muted);
-            line-height: 1.7;
+            line-height: 1.65;
             font-size: 0.96rem;
         }
 
         .memory-info small {
             display: inline-block;
-            color: rgba(43, 29, 18, 0.72);
+            color: rgba(31, 26, 23, 0.78);
+            font-size: 0.77rem;
             font-weight: 700;
             letter-spacing: 0.04em;
         }
@@ -298,14 +332,14 @@
 
         .memory-note {
             display: grid;
-            grid-template-columns: 80px 1fr;
+            grid-template-columns: 86px 1fr;
             gap: 20px;
             align-items: center;
-            background: linear-gradient(135deg, #fcf3e7, #f3ebdf);
-            border: 1px solid var(--line);
-            border-radius: 28px;
             padding: 26px 24px;
-            box-shadow: 0 14px 28px rgba(58, 42, 28, 0.06);
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            background: linear-gradient(135deg, #fdf5eb, #f0e7dc);
+            box-shadow: 0 18px 36px rgba(77, 56, 41, 0.06);
         }
 
         .memory-note-icon {
@@ -314,22 +348,22 @@
             justify-content: center;
             width: 80px;
             height: 80px;
-            border-radius: 20px;
-            background: rgba(180, 107, 61, 0.1);
-            font-size: 2.3rem;
+            border-radius: 22px;
+            background: rgba(184, 106, 61, 0.12);
+            font-size: 2.2rem;
         }
 
         .memory-note span {
             color: var(--accent);
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
             font-size: 0.72rem;
             font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
         }
 
         .memory-note h2 {
             margin: 12px 0 10px;
-            font-size: clamp(1.8rem, 3vw, 2.8rem);
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
             line-height: 1.08;
             letter-spacing: -0.05em;
             color: var(--ink);
@@ -338,9 +372,9 @@
 
         .memory-note p {
             margin: 0;
+            font-size: 1rem;
             color: var(--muted);
             line-height: 1.8;
-            font-size: 1rem;
         }
 
         footer {
@@ -350,8 +384,8 @@
         }
 
         .footer-logo {
-            font-weight: 800;
             font-size: 1rem;
+            font-weight: 800;
             letter-spacing: 0.04em;
             color: var(--ink);
         }
@@ -364,6 +398,97 @@
         footer small {
             font-size: 0.8rem;
             letter-spacing: 0.04em;
+        }
+
+        .image-placeholder {
+            min-height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f4eadf, #faf3ee);
+            color: var(--accent-strong);
+            font-size: 2rem;
+        }
+
+        body.dark-mode {
+            --page-bg: #0f1720;
+            --bg-soft: #121c27;
+            --panel: #1a2430;
+            --panel-strong: #202d3a;
+            --ink: #f2efe9;
+            --muted: #c9d1d7;
+            --accent: #f0ae7f;
+            --accent-strong: #ffc18d;
+            --accent-soft: rgba(240, 174, 127, 0.12);
+            --line: rgba(164, 181, 196, 0.14);
+            --shadow: rgba(2, 6, 12, 0.35);
+        }
+
+        body.dark-mode {
+            background: linear-gradient(180deg, #101821 0%, var(--page-bg) 100%);
+            color: var(--ink);
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(18, 27, 36, 0.8);
+            border-color: var(--line);
+        }
+
+        body.dark-mode .navbar.scrolled {
+            background: rgba(18, 27, 36, 0.92);
+        }
+
+        body.dark-mode .navbar nav a {
+            color: #d9e3ed;
+        }
+
+        body.dark-mode .navbar nav a:hover,
+        body.dark-mode .navbar nav a.active {
+            background: rgba(240, 174, 127, 0.12);
+            color: #fff;
+        }
+
+        body.dark-mode .theme-toggle {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--line);
+        }
+
+        body.dark-mode .memory-card,
+        body.dark-mode .memory-count,
+        body.dark-mode .memory-note {
+            background: var(--panel);
+            border-color: var(--line);
+            box-shadow: 0 20px 36px rgba(0, 0, 0, 0.16);
+        }
+
+        body.dark-mode .memory-card:hover {
+            border-color: rgba(240, 174, 127, 0.3);
+        }
+
+        body.dark-mode .memory-image {
+            background: linear-gradient(135deg, #2d2b2c, #1d232b);
+        }
+
+        body.dark-mode .memory-note {
+            background: linear-gradient(135deg, #1f2b37, #1a212c);
+        }
+
+        body.dark-mode .memory-info small,
+        body.dark-mode .memory-note p,
+        body.dark-mode .memory-info p,
+        body.dark-mode .memory-hero p,
+        body.dark-mode .memory-count,
+        body.dark-mode footer {
+            color: var(--muted);
+        }
+
+        body.dark-mode .memory-card h3,
+        body.dark-mode .memory-note h2,
+        body.dark-mode .memory-heading h2,
+        body.dark-mode .memory-hero h1,
+        body.dark-mode .logo,
+        body.dark-mode .footer-logo {
+            color: var(--ink);
         }
 
         @media (max-width: 980px) {
@@ -380,13 +505,8 @@
             .navbar {
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 12px;
                 padding-top: 14px;
                 padding-bottom: 14px;
-            }
-
-            .navbar nav {
-                justify-content: center;
             }
 
             .memory-grid {
@@ -433,12 +553,12 @@
                 <h1>Little moments,<span>big memories.</span></h1>
                 <p>
                     A collection of moments, places,
-                    laughs and random things worth remembering.
+                    laughs, and random things worth remembering.
                 </p>
                 <span class="memory-badge">Little moments, lovingly saved</span>
             </div>
 
-            <div class="memory-hero-icon">📷</div>
+            <div class="memory-hero-icon" aria-label="Memory hero icon">📷</div>
         </section>
 
         <section class="memory-section">
@@ -530,7 +650,7 @@
                     <h2>Save the ordinary moments too.</h2>
                     <p>
                         Not every memory needs to be a huge event. Sometimes a random photo,
-                        a funny conversation or a normal day becomes something you'll remember later.
+                        a funny conversation, or a normal day becomes something you'll remember later.
                     </p>
                 </div>
             </div>
@@ -555,8 +675,12 @@
         const memoryImages = document.querySelectorAll(".memory-image img");
         memoryImages.forEach(function (image) {
             image.addEventListener("error", function () {
+                const parent = image.closest(".memory-image");
                 image.style.display = "none";
-                image.parentElement.classList.add("image-placeholder");
+                if (parent) {
+                    parent.classList.add("image-placeholder");
+                    parent.textContent = "📷";
+                }
             });
         });
     </script>
