@@ -7,6 +7,15 @@
 
     <title>Little Plant | Small Gift</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="journey.css">
+
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- 🌙 MUST BE LAST -->
+    <link rel="stylesheet" href="darkmode.css">
+
 </head>
 
 <body>
@@ -334,42 +343,55 @@
 
     <script>
 
+        /* ================================================
+           PLANT GAME
+        ================================================ */
+
+
         let growth = 0;
+
 
         const growthValue =
             document.getElementById(
                 "growthValue"
             );
 
+
         const progress =
             document.getElementById(
                 "plantProgress"
             );
+
 
         const stage =
             document.getElementById(
                 "plantStage"
             );
 
+
         const message =
             document.getElementById(
                 "plantMessage"
             );
+
 
         const status =
             document.getElementById(
                 "plantStatus"
             );
 
+
         const flower =
             document.getElementById(
                 "plantFlower"
             );
 
+
         const stem =
             document.getElementById(
                 "plantStem"
             );
+
 
         function updatePlant() {
 
@@ -379,11 +401,16 @@
                     100
                 );
 
+
             growthValue.textContent =
                 growth + "%";
 
+
             progress.style.width =
                 growth + "%";
+
+
+            /* ---------------- STAGE 1 ---------------- */
 
             if (growth < 25) {
 
@@ -398,6 +425,9 @@
 
             }
 
+
+            /* ---------------- STAGE 2 ---------------- */
+
             else if (growth < 50) {
 
                 stage.textContent =
@@ -410,6 +440,9 @@
                     "🌿";
 
             }
+
+
+            /* ---------------- STAGE 3 ---------------- */
 
             else if (growth < 75) {
 
@@ -424,6 +457,9 @@
 
             }
 
+
+            /* ---------------- STAGE 4 ---------------- */
+
             else if (growth < 100) {
 
                 stage.textContent =
@@ -436,6 +472,9 @@
                     "🌺";
 
             }
+
+
+            /* ---------------- COMPLETE ---------------- */
 
             else {
 
@@ -455,6 +494,11 @@
 
         }
 
+
+        /* ================================================
+           WATER
+        ================================================ */
+
         document
             .getElementById("waterBtn")
             .addEventListener(
@@ -472,6 +516,11 @@
 
                 }
             );
+
+
+        /* ================================================
+           SUNLIGHT
+        ================================================ */
 
         document
             .getElementById("sunBtn")
@@ -491,6 +540,11 @@
                 }
             );
 
+
+        /* ================================================
+           ENCOURAGEMENT
+        ================================================ */
+
         document
             .getElementById("talkBtn")
             .addEventListener(
@@ -508,6 +562,7 @@
 
                 }
             );
+
 
         updatePlant();
 
