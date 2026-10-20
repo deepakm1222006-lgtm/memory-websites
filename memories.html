@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animations.css">
-
-    <!-- 🌙 MUST BE LAST -->
     <link rel="stylesheet" href="darkmode.css">
 
     <style>
@@ -52,436 +50,148 @@
 
 </head>
 
-
 <body>
-
-    <!-- ================= NAVBAR ================= -->
-
     <header class="navbar">
-
-    <div class="logo">
-        ✦ Small Gift
-    </div>
-
-    <nav>
-
-        <a href="index.html">Home</a>
-
-        <a href="memories.html">Memories</a>
-
-        <a href="journey.html">Journey</a>
-
-        <a href="timeline.html">Timeline</a>
-
-        <a href="games.html">Games</a>
-
-        <a href="plant.html">Plant</a>
-
-        <a href="reasons.html">Reasons</a>
-
-        <a href="surprise.html">Surprise</a>
-
-    </nav>
-
-    <button
-        class="theme-toggle"
-        id="themeToggle"
-        type="button"
-        aria-label="Toggle dark mode"
-    >
-        🌙
-    </button>
-
-</header>
-
-
-    <!-- ================= PAGE HERO ================= -->
+        <div class="logo">✦ Small Gift</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="memories.html">Memories</a>
+            <a href="journey.html">Journey</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="games.html">Games</a>
+            <a href="plant.html">Plant</a>
+            <a href="reasons.html">Reasons</a>
+            <a href="surprise.html">Surprise</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">🌙</button>
+    </header>
 
     <main>
-
         <section class="memory-hero">
-
             <div>
-
-                <span class="small-label">
-                    📸 MEMORY BOX
-                </span>
-
-                <h1>
-                    Little moments,
-                    <span>big memories.</span>
-                </h1>
-
-                <p>
-                    A collection of moments, places,
-                    laughs and random things worth remembering.
-                </p>
-
-                <span class="memory-badge">
-                    Little moments, lovingly saved
-                </span>
-
+                <span class="small-label">📸 MEMORY BOX</span>
+                <h1>Little moments,<span>big memories.</span></h1>
+                <p>A collection of moments, places, laughs and random things worth remembering.</p>
+                <span class="memory-badge">Little moments, lovingly saved</span>
             </div>
-
-
-            <div class="memory-hero-icon">
-                📷
-            </div>
-
+            <div class="memory-hero-icon">📷</div>
         </section>
 
-
-        <!-- ================= MEMORY FILTER ================= -->
-
         <section class="memory-section">
-
             <div class="memory-heading">
-
                 <div>
-
-                    <span class="section-label">
-                        MEMORY COLLECTION
-                    </span>
-
-                    <h2>
-                        The Memory Wall
-                    </h2>
-
+                    <span class="section-label">MEMORY COLLECTION</span>
+                    <h2>The Memory Wall</h2>
                 </div>
-
                 <div class="memory-count">
                     <strong id="memoryCount">5</strong>
                     treasured moments
                 </div>
-
             </div>
-
-
-            <!-- ================= MEMORY GRID ================= -->
 
             <div class="memory-grid">
-
-
-                <!-- MEMORY 1 -->
-
                 <article class="memory-card">
-
                     <div class="memory-image">
-
-                        <img
-                            src="images/memory1.png"
-                            alt="Memory 1"
-                        >
-
-                        <span class="memory-number">
-                            01
-                        </span>
-
+                        <img src="images/memory1.png" alt="Memory 1">
+                        <span class="memory-number">01</span>
                     </div>
-
                     <div class="memory-info">
-
-                        <span>
-                            🌱 BEGINNING
-                        </span>
-
-                        <h3>
-                            A simple beginning
-                        </h3>
-
-                        <p>
-                            Some stories start with
-                            something very ordinary.
-                        </p>
-
-                        <small>
-                            📅 01-09-2026
-                        </small>
-
+                        <span>🌱 BEGINNING</span>
+                        <h3>A simple beginning</h3>
+                        <p>Some stories start with something very ordinary.</p>
+                        <small>📅 01-09-2026</small>
                     </div>
-
                 </article>
 
-
-                <!-- MEMORY 2 -->
-
                 <article class="memory-card">
-
                     <div class="memory-image">
-
-                        <img
-                            src="images/memory2.jpeg"
-                            alt="Memory 2"
-                        >
-
-                        <span class="memory-number">
-                            02
-                        </span>
-
+                        <img src="images/memory2.jpeg" alt="Memory 2">
+                        <span class="memory-number">02</span>
                     </div>
-
                     <div class="memory-info">
-
-                        <span>
-                            📸 MOMENT
-                        </span>
-
-                        <h3>
-                            One good day
-                        </h3>
-
-                        <p>
-                            A day that deserves a
-                            small place in the memory box.
-                        </p>
-
-                        <small>
-                            📅 18-10-2026
-                        </small>
-
+                        <span>📸 MOMENT</span>
+                        <h3>One good day</h3>
+                        <p>A day that deserves a small place in the memory box.</p>
+                        <small>📅 18-10-2026</small>
                     </div>
-
                 </article>
 
-
-                <!-- MEMORY 3 -->
-
                 <article class="memory-card">
-
                     <div class="memory-image">
-
-                        <img
-                            src="images/memory3.jpeg"
-                            alt="Memory 3"
-                        >
-
-                        <span class="memory-number">
-                            03
-                        </span>
-
+                        <img src="images/memory3.jpeg" alt="Memory 3">
+                        <span class="memory-number">03</span>
                     </div>
-
                     <div class="memory-info">
-
-                        <span>
-                            😄 FUN
-                        </span>
-
-                        <h3>
-                            A funny moment
-                        </h3>
-
-                        <p>
-                            The moments that make you
-                            laugh when you remember them.
-                        </p>
-
-                        <small>
-                            📅 16-08-2026
-                        </small>
-
+                        <span>😄 FUN</span>
+                        <h3>A funny moment</h3>
+                        <p>The moments that make you laugh when you remember them.</p>
+                        <small>📅 16-08-2026</small>
                     </div>
-
                 </article>
 
-
-                <!-- MEMORY 4 -->
-
                 <article class="memory-card">
-
                     <div class="memory-image">
-
-                        <img
-                            src="images/memory4.jpeg"
-                            alt="Memory 4"
-                        >
-
-                        <span class="memory-number">
-                            04
-                        </span>
-
+                        <img src="images/memory4.jpeg" alt="Memory 4">
+                        <span class="memory-number">04</span>
                     </div>
-
                     <div class="memory-info">
-
-                        <span>
-                            🎓 SCHOOL
-                        </span>
-
-                        <h3>
-                            School days
-                        </h3>
-
-                        <p>
-                            Old memories from a
-                            completely different chapter.
-                        </p>
-
-                        <small>
-                            📅 2012-2013
-                        </small>
-
+                        <span>🎓 SCHOOL</span>
+                        <h3>School days</h3>
+                        <p>Old memories from a completely different chapter.</p>
+                        <small>📅 2012-2013</small>
                     </div>
-
                 </article>
 
-
-                <!-- MEMORY 5 -->
-
                 <article class="memory-card">
-
                     <div class="memory-image">
-
-                        <img
-                            src="images/memory5.svg"
-                            alt="Memory 5"
-                        >
-
-                        <span class="memory-number">
-                            05
-                        </span>
-
+                        <img src="images/memory5.png" alt="Memory 5">
+                        <span class="memory-number">05</span>
                     </div>
-
                     <div class="memory-info">
-
-                        <span>
-                            🚀 NEXT
-                        </span>
-
-                        <h3>
-                            More to come
-                        </h3>
-
-                        <p>
-                            The memory wall isn't finished yet.
-                        </p>
-
-                        <small>
-                            📅 Future memory
-                        </small>
-
+                        <span>🚀 NEXT</span>
+                        <h3>More to come</h3>
+                        <p>The memory wall isn't finished yet.</p>
+                        <small>📅 Future memory</small>
                     </div>
-
                 </article>
-
-
             </div>
-
         </section>
-
-
-        <!-- ================= MEMORY NOTE ================= -->
 
         <section class="memory-note-section">
-
             <div class="memory-note">
-
-                <div class="memory-note-icon">
-                    📝
-                </div>
-
+                <div class="memory-note-icon">📝</div>
                 <div>
-
-                    <span>
-                        MEMORY TIP
-                    </span>
-
-                    <h2>
-                        Save the ordinary moments too.
-                    </h2>
-
-                    <p>
-                        Not every memory needs to be a
-                        huge event. Sometimes a random
-                        photo, a funny conversation or
-                        a normal day becomes something
-                        you'll remember later.
-                    </p>
-
+                    <span>MEMORY TIP</span>
+                    <h2>Save the ordinary moments too.</h2>
+                    <p>Not every memory needs to be a huge event. Sometimes a random photo, a funny conversation or a normal day becomes something you’ll remember later.</p>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ================= FOOTER ================= -->
-
         <footer>
-
-            <div class="footer-logo">
-                🌱 Ilakiyaa's World
-            </div>
-
-            <p>
-                Collect moments, not just pictures.
-            </p>
-
-            <small>
-                © 2026 • Little World Project • Made with love
-            </small>
-
+            <div class="footer-logo">🌱 Ilakiyaa's World</div>
+            <p>Collect moments, not just pictures.</p>
+            <small>© 2026 • Little World Project • Made with love</small>
         </footer>
-
     </main>
 
-
-    <!-- ================= SCRIPT ================= -->
-
     <script src="main.js"></script>
-
-
     <script>
-
-        // Count memory cards automatically
-
-        const memoryCards =
-            document.querySelectorAll(
-                ".memory-card"
-            );
-
-        const memoryCount =
-            document.getElementById(
-                "memoryCount"
-            );
-
+        const memoryCards = document.querySelectorAll(".memory-card");
+        const memoryCount = document.getElementById("memoryCount");
 
         if (memoryCount) {
-
-            memoryCount.textContent =
-                memoryCards.length;
-
+            memoryCount.textContent = memoryCards.length;
         }
 
-
-        // Image fallback
-
-        const memoryImages =
-            document.querySelectorAll(
-                ".memory-image img"
-            );
-
-
+        const memoryImages = document.querySelectorAll(".memory-image img");
         memoryImages.forEach(function (image) {
-
-            image.addEventListener(
-                "error",
-                function () {
-
-                    image.style.display = "none";
-
-                    image.parentElement.classList.add(
-                        "image-placeholder"
-                    );
-
-                }
-            );
-
+            image.addEventListener("error", function () {
+                image.style.display = "none";
+                image.parentElement.classList.add("image-placeholder");
+            });
         });
-
     </script>
-
 </body>
 
 </html>
