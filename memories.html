@@ -24,6 +24,30 @@
             font-size: 32px;
             border-radius: 18px 18px 0 0;
         }
+
+        .memory-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(159, 122, 234, 0.12);
+            border: 1px solid rgba(159, 122, 234, 0.18);
+            color: #5e3a8c;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 700;
+        }
+
+        .memory-card {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-6px);
+        }
     </style>
 
 </head>
@@ -93,6 +117,10 @@
                     laughs and random things worth remembering.
                 </p>
 
+                <span class="memory-badge">
+                    Little moments, lovingly saved
+                </span>
+
             </div>
 
 
@@ -123,7 +151,7 @@
 
                 <div class="memory-count">
                     <strong id="memoryCount">5</strong>
-                    memories
+                    treasured moments
                 </div>
 
             </div>
@@ -391,7 +419,7 @@
             </p>
 
             <small>
-                © 2026 • Little World Project
+                © 2026 • Little World Project • Made with love
             </small>
 
         </footer>
