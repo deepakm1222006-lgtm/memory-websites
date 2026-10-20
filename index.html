@@ -78,7 +78,7 @@
                 <p>
                     A small website filled with memories,
                     games, challenges, and things to explore.
-                    Today is your day, and it is made to celebrate you.
+                    Today is all about celebrating you and your happy energy.
                 </p>
 
                 <div class="hero-buttons">
@@ -122,21 +122,21 @@
             <div class="birthday-card">
                 <div class="birthday-glow"></div>
                 <div class="birthday-content">
-                    <span class="birthday-tag">🎉 TODAY'S SPECIAL</span>
-                    <h2>Happy Birthday, My Love 💖</h2>
+                    <span class="birthday-tag">🎉 BIRTHDAY WISHES</span>
+                    <h2>Happy Birthday, Ilakiyaa!</h2>
                     <p>
-                        Today is all about your smile, your laughter, your kindness,
-                        and the light you bring into every day. May this year be filled
-                        with love, surprises, beautiful memories, and dreams that come true.
+                        Wishing you a joyful year filled with laughter, good vibes,
+                        success, and beautiful memories. May your new chapter be bright,
+                        peaceful, and full of little moments that make you smile.
                     </p>
 
                     <div class="birthday-actions">
-                        <a href="memories.html" class="primary-btn birthday-btn">See our memories ✨</a>
-                        <a href="reasons.html" class="secondary-btn birthday-secondary">Why I love you</a>
+                        <a href="memories.html" class="primary-btn birthday-btn">See memories ✨</a>
+                        <a href="reasons.html" class="secondary-btn birthday-secondary">Explore more</a>
                     </div>
                 </div>
 
-                <div class="birthday-icon" aria-hidden="true">🎂</div>
+                <div class="birthday-icon" aria-hidden="true">🎈</div>
             </div>
         </section>
 
@@ -384,13 +384,13 @@
     <script>
         const birthdayCard = document.querySelector('.birthday-card');
         if (birthdayCard) {
-            for (let i = 0; i < 18; i++) {
+            for (let i = 0; i < 14; i++) {
                 const sparkle = document.createElement('span');
                 sparkle.className = 'birthday-sparkle';
                 sparkle.style.left = Math.random() * 100 + '%';
                 sparkle.style.top = Math.random() * 100 + '%';
                 sparkle.style.animationDelay = (i * 0.18) + 's';
-                sparkle.innerHTML = i % 2 === 0 ? '✨' : '💖';
+                sparkle.innerHTML = i % 2 === 0 ? '✨' : '🎉';
                 birthdayCard.appendChild(sparkle);
             }
         }
